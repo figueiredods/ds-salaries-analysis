@@ -13,13 +13,16 @@ Este projeto é uma análise exploratória dos salários na área de Data Scienc
   * **MI (Pleno)**: \$ 87,996.06 USD (+42.8%)
   * **SE (Sénior)**: \$138,617.29 USD (+57.5% — *maior crescimento*)
   * **EX (Executivo)**: \$199,392.04 USD (+43.8%)
+* **Diferença Salarial USA vs. Offshore**:
+  * **USA**: \$ 148,955.90 USD (+87.7%)
+  * **Offshore**: \$ 79,366.84 USD
 
 ---
 
 ## 📊 Visualização de Dados
 
 ![Média Salarial por Nível de Experiência](imagens/grafico_salarios_experiencia.png)
-![Média Salarial por Nível de Experiência](imagens/grafico_salarios_offshore.png)
+![Salário USA vs. Offshore (Empresas USA)](imagens/grafico_salarios_offshore.png)
 
 ---
 
