@@ -2,7 +2,7 @@
 import pandas as pd
 
 # 1. Carregar o conjunto de dados
-df = pd.read_csv("dados/ds_salaries.csv", index_col=0)
+df = pd.read_csv("/Users/danielfigueiredo/Library/CloudStorage/GoogleDrive-figueiredo.ds2018@gmail.com/My Drive/Documents/Portugal/estudo/python_java_sql_study/ds-salaries-analysis/dados/ds_salaries.csv", index_col=0)
 # df = pd.read_csv("dados/ds_salaries.csv", usecols = lambda x: x != "Unnamed: 0") - alternativa para remover coluna quando lê o arquivo
 
 # 2. Visualizar as 5 primentas linhas
