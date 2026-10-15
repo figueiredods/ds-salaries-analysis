@@ -24,6 +24,7 @@ Este projeto é uma análise exploratória dos salários na área de Data Scienc
 
 ## 📁 Estrutura do Repositório
 
+```text
 ds-salaries-analysis/
 ├── dados/
 │   └── ds_salaries.csv                     # Conjunto de dados do Kaggle
@@ -35,7 +36,7 @@ ds-salaries-analysis/
 │   └── grafico_salarios_experiencia.png    # Gráfico gerado para o relatório
 ├── .gitignore                              # Ficheiros ignorados pelo Git
 └── README.md                               # Apresentação do projeto
-
+```
 ---
 
 ## 🛠️ Tecnologias Utilizadas
