@@ -1,7 +1,9 @@
 import pandas as pd
 
 # 1. Carregar o conjunto de dados
-df = pd.read_csv("dados/ds_salaries.csv", index_col=0)
+caminho_csv = '/Users/danielfigueiredo/Library/CloudStorage/GoogleDrive-figueiredo.ds2018@gmail.com/My Drive/Documents/Portugal/estudo/python_java_sql_study/ds-salaries-analysis/dados/ds_salaries.csv'
+
+df = pd.read_csv(caminho_csv, index_col=0)
 
 # 2. Agrupar por nível
 ordem_carreira = ["EN", "MI", "SE", "EX"]
@@ -44,3 +46,6 @@ for nivel, linha in df_resumo.iterrows():
     print(f"{nome_exibicao:<20} | {salario_formatado:<15} | {aumento_str:<25}")
 
 print("-" * 70 + "\n")
+
+# Montando o gráfico
+fig, ax = plt.subplots

@@ -2,7 +2,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Carregar o conjunto de dados
-df = pd.read_csv("/Users/danielfigueiredo/Library/CloudStorage/GoogleDrive-figueiredo.ds2018@gmail.com/My Drive/Documents/Portugal/estudo/python_java_sql_study/ds-salaries-analysis/dados/ds_salaries.csv", index_col=0)
+caminho_csv = '/Users/danielfigueiredo/Library/CloudStorage/GoogleDrive-figueiredo.ds2018@gmail.com/My Drive/Documents/Portugal/estudo/python_java_sql_study/ds-salaries-analysis/dados/ds_salaries.csv'
+
+caminho_grafico = '/Users/danielfigueiredo/Library/CloudStorage/GoogleDrive-figueiredo.ds2018@gmail.com/My Drive/Documents/Portugal/estudo/python_java_sql_study/ds-salaries-analysis/imagens/grafico_salarios_experiencia.png'
+
+df = pd.read_csv(caminho_csv, index_col=0)
 
 # Agrupar pela hierarquida de carreira
 ordem_carreira = ['EN', 'MI', 'SE', 'EX']
@@ -34,9 +38,9 @@ for barra in barras:
     )
 
     # Personalizar títulos e rótulos dos eixos
-    ax.set_title('Média Salarial por Nível de Experiência em Data Science', fontsize = 13, fontweight = 'bold', pad = 20, color = '#1d3557')
-    ax.set_xlabel('Nível de Experiência', fontsize = 11, fontweight = 'bold', labelpad = 10)
-    ax.set_ylabel('Salário Médio (USD)', fontsize = 11, fontweight = 'bold', labelpad = 10)
+    ax.set_title('Média Salarial por Nível de Experiência em Data Science', fontsize = 13, fontweight = 'bold', pad = 20, color = '#1d3557') # título
+    ax.set_xlabel('Nível de Experiência', fontsize = 11, fontweight = 'bold', labelpad = 10) # eixo x
+    ax.set_ylabel('Salário Médio (USD)', fontsize = 11, fontweight = 'bold', labelpad = 10) # eixo y
 
     # Ajustes de escala e formatação do Eixo Y
     ax.set_ylim(0, 230000)
@@ -44,13 +48,13 @@ for barra in barras:
     ax.grid(axis = 'y', linestyle = '--', alpha = 0.5)
     ax.set_axisbelow(True)
 
-    # Remover birdas desnecessárias (Design Limpo / Chartjunk)
+    # Remover bordas desnecessárias (Design Limpo / Chartjunk)
     for borda in ['top', 'right', 'left']:
         ax.spines[borda].set_visible(False)
 
 # Guardar a imagem na pasta do projeto e exibir
 plt.tight_layout()
-plt.savefig('/Users/danielfigueiredo/Library/CloudStorage/GoogleDrive-figueiredo.ds2018@gmail.com/My Drive/Documents/Portugal/estudo/python_java_sql_study/ds-salaries-analysis/imagens/grafico_salarios_experiencia.png', dpi = 300, bbox_inches = 'tight')
+plt.savefig(caminho_grafico, dpi = 300, bbox_inches = 'tight')
 plt.show()
 
 print("Gráfico 'imagens/grafico_salarios_experiencia.png' gerado com sucesso!")
