@@ -50,9 +50,10 @@ ds-salaries-analysis/
 ## 💻 Como Executar o Projeto
 
 1. Abra o terminal na pasta raiz do projeto:
-
+```bash
 cd ds-salaries-analysis
-
+```
 2. Execute o script de visualização:
-
+```bash
 python scripts/03_visualizacao.py
+```
