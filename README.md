@@ -19,6 +19,7 @@ Este projeto é uma análise exploratória dos salários na área de Data Scienc
 ## 📊 Visualização de Dados
 
 ![Média Salarial por Nível de Experiência](imagens/grafico_salarios_experiencia.png)
+![Média Salarial por Nível de Experiência](imagens/grafico_salarios_offshore.png)
 
 ---
 
@@ -31,9 +32,12 @@ ds-salaries-analysis/
 ├── scripts/
 │   ├── 01_exploracao.py                    # Análise inicial de dados
 │   ├── 02_tabela_carreira.py               # Agregação por nível de experiência
-│   └── 03_visualizacao.py                  # Geração do gráfico Matplotlib
+│   ├── 03_visualizacao.py                  # Geração do gráfico Matplotlib
+│   ├── 04_analise_geografica.py            # Analise por localização em relação ao país da companhia
+│   └── 05_grafico_analise_geografica.py    # Geração do gráfico Matplotlib
 ├── imagens/
-│   └── grafico_salarios_experiencia.png    # Gráfico gerado para o relatório
+│   ├── grafico_salarios_experiencia.png    # Gráficos gerados para o relatório
+│   └── grafico_salarios_offshore.png
 ├── .gitignore                              # Ficheiros ignorados pelo Git
 └── README.md                               # Apresentação do projeto
 ```
@@ -56,4 +60,8 @@ cd ds-salaries-analysis
 2. Execute o script de visualização:
 ```bash
 python scripts/03_visualizacao.py
+```
+3. Execute o script de visualização:
+```bash
+python scripts/05_grafico_analise_geografica.py
 ```
