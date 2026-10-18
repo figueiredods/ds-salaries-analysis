@@ -9,9 +9,6 @@ import os
 import pandas as pd
 import config
 
-# Garantir que a pasta existe
-os.makedirs(config.DIR_IMAGENS, exist_ok = True)
-
 # Carregar o Dataset
 df = pd.read_csv(config.CSV_SALARIOS, index_col=0)
 
