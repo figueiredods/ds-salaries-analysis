@@ -5,7 +5,6 @@ from pathlib import Path
 #Ajuste de caminho para localizar o config.py na pasta raiz do projeto
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 
-import os
 import pandas as pd
 import config
 

@@ -31,7 +31,7 @@ for barra in barras:
         ha = 'center', va = 'bottom', fontsize = 10, fontweight = 'bold', color = '#1d3557')
 
     # Estilo
-    ax.set_title('Média Salarial emEmpresas dos EUA: Local vs. Offshore', fontsize = 12, fontweight = 'bold', pad = 15, color = '#1d3557')
+    ax.set_title('Média Salarial em Empresas dos EUA: Local vs. Offshore', fontsize = 12, fontweight = 'bold', pad = 15, color = '#1d3557')
     ax.set_xlabel('Localização do Trabalhador', fontsize = 11, fontweight = 'bold', labelpad = 10)
     ax.set_ylabel('Salário Médio (USD $)', fontsize = 11, fontweight = 'bold', labelpad = 10)
 
