@@ -1,145 +1,141 @@
 # 📊 Data Science Job Salaries Analysis
 
-Este repositório contém uma análise exploratória e estatística sobre a remuneração global na área de **Data Science** e **Tecnologia**. O objetivo do projeto é mapear como o **nível de experiência**, a **localização geográfica (local vs. offshore)**, o **tamanho da empresa** e o **modelo de trabalho (presencial, híbrido e remoto)** impactam os salários anuais em dólares (USD).
+This repository contains an exploratory and statistical analysis of global compensation in **Data Science** and **Tech**. The objective of the project is to map how **experience level**, **geographic location (local vs. offshore)**, **company size**, and **work model (in-person, hybrid, and remote)** impact annual salaries in US Dollars (USD).
 
-O projeto foi desenvolvido seguindo boas práticas de engenharia de software e **Clean Code**: arquitetura modular, centralização de configurações no `config.py` e separação rigorosa entre processamento de dados e geração gráfica.
-
----
-
-## 📈 Principais Descobertas
-
-* **Amostra Analisada**: 607 registos de profissionais de dados.
-* **Salário Médio Global**: **\$112,297.87 USD / ano**.
-* **Média Salarial por Nível de Experiência**:
-  * **EN (Júnior)**: \$61,643.32 USD
-  * **MI (Pleno)**: \$87,996.06 USD (+42.8% — *maior salto salarial percentual*)
-  * **SE (Sénior)**: \$138,617.29 USD (+57.5%)
-  * **EX (Executivo)**: \$199,392.04 USD (+43.8% — *maior salto absoluto*)
-* **Diferença Salarial USA vs. Offshore**:
-  * **USA (Local)**: \$148,955.90 USD (+87.7% vs. Offshore)
-  * **Offshore (Remoto Internacional)**: \$79,366.84 USD
-* **Impacto do Porte da Empresa e Modelo de Trabalho**:
-  * **Porte**: Empresas de grande (**L**) e médio (**M**) porte pagam salários significativamente superiores às de pequeno porte (**S**).
-  * **Modelo de Trabalho**: O isolamento da senioridade em cada cargo (painel 2x2) revela a real variação de remuneração entre regimes presencial, híbrido e remoto sem o viés da concentração de seniores no remoto.
+The project was developed following software engineering best practices and **Clean Code** principles: modular architecture, centralized configuration in `config.py`, and strict separation between data processing and chart generation.
 
 ---
 
-## 🎨 Visualizações e Gráficos
+## 📈 Key Findings
 
-### 1. Progressão Salarial por Experiência e Comparação Geográfica
-![Salários por Experiência](imagens/grafico_salarios_experiencia.png)
+* **Analyzed Sample**: 607 data professional records.
+* **Global Average Salary**: **$112,297.87 USD / year**.
+* **Average Salary by Experience Level**:
+  * **EN (Entry-level / Junior)**: $61,643.32 USD
+  * **MI (Mid-level)**: $87,996.06 USD (+42.8% — *highest percentage salary jump*)
+  * **SE (Senior)**: $138,617.29 USD (+57.5%)
+  * **EX (Executive)**: $199,392.04 USD (+43.8% — *highest absolute jump*)
+* **US vs. Offshore Salary Gap**:
+  * **US (Local)**: $148,955.90 USD (+87.7% vs. Offshore)
+  * **Offshore (International Remote)**: $79,366.84 USD
+* **Impact of Company Size and Work Model**:
+  * **Company Size**: Large (**L**) and medium (**M**) sized companies pay significantly higher salaries than small (**S**) ones.
+  * **Work Model**: Isolating seniority within each job title (2x2 panel) reveals the true compensation variation across in-person, hybrid, and remote setups without the bias of remote senior concentration.
 
 ---
 
-### 2. Média Salarial por País e Impacto do Modelo Offshore (EUA)
-![Média por País](imagens/grafico_salarios_paises.png)
-![EUA vs Offshore](imagens/grafico_salarios_offshore.png)
+## 🎨 Visualizations & Charts
+
+### 1. Salary Progression by Experience & Geographic Comparison
+![Salaries by Experience](images/experience_salaries_chart.png)
 
 ---
 
-### 3. Impacto do Porte da Empresa e do Modelo de Trabalho por Cargo
-![Tamanho da Empresa](imagens/grafico_tamanho_empresa.png)
-![Modelo Remoto por Cargo](imagens/grafico_remoto.png)
+### 2. Average Salary by Country & Impact of US Offshore Model
+![Average by Country](images/country_salaries_chart.png)
+![US vs Offshore](images/offshore_salaries_chart.png)
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+### 3. Impact of Company Size & Work Model by Job Title
+![Company Size](images/company_size_chart.png)
+![Remote Model by Job Title](images/remote_chart.png)
+
+---
+
+## 🛠️ Technologies Used
 
 * **Python 3.13**
-* **Pandas** (Tratamento, limpeza e agregação de dados)
-* **Matplotlib** (Visualização e geração de gráficos de alta resolução)
-* **NumPy** (Cálculos numéricos e operações vetoriais)
+* **Pandas** (Data wrangling, cleaning, and aggregation)
+* **Matplotlib** (High-resolution visualization and plot generation)
+* **NumPy** (Numerical computing and vector operations)
 
 ---
 
-## 📁 Estrutura do Repositório
+## 📁 Repository Structure
 
 ```text
 ds-salaries-analysis/
 │
-├── dados/                         # Datasets brutos (CSVs)
-│   ├── ds_salaries.csv            # Registo de salários globais
-│   └── iso_3166_data.csv          # Tabela de mapeamento dos códigos ISO dos países
+├── data/                                          # Raw datasets (CSVs)
+│   ├── ds_salaries.csv                            # Global salary records
+│   └── iso_3166_data.csv                          # Country ISO code mapping table
 │
-├── imagens/                       # Gráficos exportados automaticamente
-│   ├── grafico_salarios_experiencia.png
-│   ├── grafico_salarios_paises.png
-│   ├── grafico_salarios_offshore.png
-│   ├── grafico_salarios_tamanho_empresa.png
-│   └── grafico_salarios_remoto_presencial.png
+├── images/                                        # Automatically exported charts
+│   ├── experience_salaries_chart.png
+│   ├── country_salaries_chart.png
+│   ├── offshore_salaries_chart.png
+│   ├── company_size_chart.png
+│   └── remote_chart.png
 │
-├── scripts/                       # Módulos Python de análise e gráficos
-│   ├── s01_exploracao.py
-│   ├── s02_analise_salario_exp.py
-│   ├── s03_grafico_salario_exp.py
-│   ├── s04_analise_geografica.py
-│   ├── s05_grafico_paises.py
-│   ├── s06_grafico_us_offshore.py
-│   ├── s07_analise_tamanho_empresa.py
-│   ├── s08_grafico_tamanho_empresa.py
-│   ├── s09_analise_remoto_presencial.py
-│   └── s10_grafico_remoto_presencial.py
-│
-├── config.py                      # Configuração centralizada de caminhos (pathlib.Path)
-└── README.md                      # Documentação principal do projeto
-
+├── scripts/                                       # Python analysis and visualization modules
+│   ├── s01_exploration.py
+│   ├── s02_salary_exp_analysis.py
+│   ├── s03_salary_exp_chart.py
+│   ├── s04_geographic_analysis.py
+│   ├── s05_country_salary_chart.py
+│   ├── s06_us_offshore_chart.py
+│   ├── s07_company_size_analysis.py
+│   ├── s08_company_size_chart.py
+│   ├── s09_remote_inperson_analysis.py
+│   └── s10_remote_inperson_chart.py
+│  
+├── config.py                                      # Centralized path configuration (pathlib.Path)
+└── README.md                                      # Main project documentation
 ```
 
 ---
 
-## 📋 Módulos da Pipeline (`scripts/`)
+## 📋 Pipeline Modules (`scripts/`)
 
-| Script                                  | Tipo            | Função &amp; Responsabilidade                                                                                                      |
-| --------------------------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| **config.py** *(Raiz)*                  | ⚙️ *Config*     | Centralização de constantes e caminhos dinâmicos de dados e imagens via `pathlib.Path`.                                        |
-| **s01\_exploracao.py**                  | 🔍 *Exploração* | Inspeção inicial da estrutura (`.info()`, `.describe()`) e identificação de valores discrepantes.                              |
-| **s02\_analise\_salario\_exp.py**       | 📊 *Análise*    | Agrupamento por nível de experiência (`EN`, `MI`, `SE`, `EX`), diferenças absolutas e percentuais.                             |
-| **s03\_grafico\_salario\_exp.py**       | 🎨 *Gráfico*    | Visualização da progressão de carreira por nível de experiência *(importa* *df\_resumo* *do* *s02* *)*.                        |
-| **s04\_analise\_geografica.py**         | 📊 *Análise*    | Mapeamento dos códigos ISO 3166, criação da flag `offshore` e comparação US Local vs. Offshore.                                |
-| **s05\_grafico\_paises.py**             | 🎨 *Gráfico*    | Gráfico de barras horizontais do salário médio por país de residência *(importa* *df\_paises\_filtrado* *do* *s04* *)*.        |
-| **s06\_grafico\_us\_offshore.py**       | 🎨 *Gráfico*    | Comparação de empresas dos EUA entre funcionários locais e contratações *Offshore* *(importa do* *s04* *)*.                    |
-| **s07\_analise\_tamanho\_empresa.py**   | 📊 *Análise*    | Mapeamento dos portes de empresa (`S`, `M`, `L`) e variações relativas.                                                        |
-| **s08\_grafico\_tamanho\_empresa.py**   | 🎨 *Gráfico*    | Gráfico de barras por tamanho de empresa *(importa* *df\_resumo* *do* *s07* *)*.                                               |
-| **s09\_analise\_remoto\_presencial.py** | 📊 *Análise*    | Processamento em loop para os 4 principais cargos por senioridade e modelo de trabalho.                                        |
-| **s10\_grafico\_remoto\_presencial.py** | 🎨 *Gráfico*    | Painel em grade 2x2 com subplots comparando a remuneração por cargo, senioridade e modelo de trabalho *(importa do* *s09* *)*. |
+| Script | Type | Function & Responsibility |
+| :--- | :--- | :--- |
+| **`config.py`** *(Root)* | ⚙️ *Config* | Centralized constants and dynamic paths for data and images via `pathlib.Path`. |
+| **`s01_exploration.py`** | 🔍 *Exploration* | Initial structure inspection (`.info()`, `.describe()`) and outlier identification. |
+| **`s02_salary_exp_analysis.py`** | 📊 *Analysis* | Grouping by experience level (`EN`, `MI`, `SE`, `EX`), absolute and percentage differences. |
+| **`s03_salary_exp_chart.py`** | 🎨 *Chart* | Career progression visualization by experience level *(imports `df_summary` from `s02_salary_exp_analysis`)*. |
+| **`s04_geographic_analysis.py`** | 📊 *Analysis* | ISO 3166 code mapping, `offshore` flag creation, and US Local vs. Offshore comparison. |
+| **`s05_country_salary_chart.py`** | 🎨 *Chart* | Horizontal bar chart of average salary by country of residence *(imports `df_filtered_countries` from `s04_geographic_analysis`)*. |
+| **`s06_us_offshore_chart.py`** | 🎨 *Chart* | US company comparison between local employees and *Offshore* hires *(imports `df_us_grouped` from `s04_geographic_analysis`)*. |
+| **`s07_company_size_analysis.py`**| 📊 *Analysis* | Company size mapping (`S`, `M`, `L`) and relative variations. |
+| **`s08_company_size_chart.py`**| 🎨 *Chart* | Bar chart by company size *(imports `df_summary` from `s07_company_size_analysis`)*. |
+| **`s09_remote_inperson_analysis.py`**| 📊 *Analysis* | Loop processing for top 4 job titles by seniority and work model. |
+| **`s10_remote_inperson_chart.py`**| 🎨 *Chart* | 2x2 grid panel with subplots comparing compensation by job title, seniority, and work model *(imports `tables_by_job` from `s09_remote_inperson_analysis`)*. |
 
 ---
 
-## 💻 Como Executar o Projeto
+## 💻 How to Run the Project
 
-### 1\. Pré-requisitos
+### 1. Prerequisites
 
-Certifique-se de ter o Python instalado e as bibliotecas necessárias:
+Make sure you have Python installed along with the required libraries:
 
-```
+```bash
 pip install pandas matplotlib numpy
-
 ```
 
-### 2\. Executar um Script de Análise (Terminal)
+### 2. Run an Analysis Script (Terminal)
 
-Para processar os dados e visualizar as tabelas explicativas e métricas diretamente no terminal:
+To process the data and display explanatory tables and metrics directly in the terminal:
 
-```
-python scripts/s07_analise_tamanho_empresa.py
-
-```
-
-### 3\. Gerar um Gráfico
-
-Para executar um script de visualização e exportar a imagem correspondente para a pasta `imagens/`:
-
-```
-python scripts/s10_grafico_remoto_presencial.py
-
+```bash
+python scripts/s07_company_size_analysis.py
 ```
 
-ℹ️ **Nota:** O comando acima salva a imagem em alta resolução (`.png`) na pasta `imagens/`.
+### 3. Generate a Chart
 
-### 4\. Visualizar o Gráfico Gerado
+To execute a visualization script and export the corresponding image to the `images/` folder:
 
-Abra a imagem diretamente pelo explorador do VS Code ou pelo terminal:
+```bash
+python scripts/s10_remote_inperson_chart.py
+```
 
-* **macOS**: `open imagens/grafico_salarios_remoto_presencial.png`
-* **Linux**: `xdg-open imagens/grafico_salarios_remoto_presencial.png`
-* **Windows (PowerShell)**: `Start-Process imagens\grafico_salarios_remoto_presencial.png`
+ℹ️ **Note:** The command above saves a high-resolution image (`.png`) in the `images/` folder.
+
+### 4. View the Generated Chart
+
+Open the image directly via the VS Code file explorer or through the terminal:
+
+* **macOS**: `open images/remote_chart.png`
+* **Linux**: `xdg-open images/remote_chart.png`
+* **Windows (PowerShell)**: `Start-Process images\remote_chart.png`
